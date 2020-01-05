@@ -1,7 +1,8 @@
 # mutli-next-deploy
 
 
-# yarn install
-# yarn dev
+yarn install
+yarn dev
 
+#######
 Deployed:
