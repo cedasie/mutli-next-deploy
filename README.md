@@ -6,4 +6,4 @@
 -yarn dev
 
 #######
-Deployed:
+Deployed: https://multi-next.netlify.com
