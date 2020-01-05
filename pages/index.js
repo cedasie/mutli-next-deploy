@@ -19,6 +19,7 @@ const Homepage = ({ t }) => (
         >
           {t('change-locale')}
         </button>
+        <p></p>
         <Link href="/second-page">
           <button type="button">{t('to-second-page')}</button>
         </Link>
