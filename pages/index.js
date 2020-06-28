@@ -7,7 +7,7 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 
 const Homepage = ({ t }) => (
-  <React.Fragment>
+  <>
     <main>
       <Header title={t('h1')} />
       <div>
@@ -25,15 +25,15 @@ const Homepage = ({ t }) => (
       </div>
     </main>
     <Footer />
-  </React.Fragment>
+  </>
 );
 
 Homepage.getInitialProps = async () => ({
-  namespacesRequired: ['common', 'footer']
+  namespacesRequired: ['common', 'footer'],
 });
 
 Homepage.propTypes = {
-  t: PropTypes.func.isRequired
+  t: PropTypes.func.isRequired,
 };
 
 export default withTranslation('common')(Homepage);

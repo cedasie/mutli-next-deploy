@@ -1,28 +1,16 @@
 const NextI18Next = require('next-i18next').default;
-const config = require('next/config').default();
-const get = require('lodash/get');
-
-const localeSubpaths = get(
-  config,
-  'publicRuntimeConfig.localeSubpaths',
-  'none'
-);
-
-const EN = 'en';
-const DE = 'de';
-
-const localeSubpathMapping = {
-  none: {},
-  en: EN,
-  de: DE,
-  all: {
-    en: EN,
-    de: DE
-  }
-};
 
 module.exports = new NextI18Next({
-  otherLanguages: [EN, DE],
-  localeSubpaths: localeSubpathMapping[localeSubpaths],
-  load: true
+  defaultLanguage: 'en',
+  otherLanguages: ['de'],
+  browserLanguageDetection: true,
+  serverLanguageDetection: true,
+  detection: {
+    lookupCookie: 'next-i18next',
+    order: ['cookie', 'localStorage', 'navigator', 'path', 'subdomain'],
+    caches: ['cookie'],
+    excludeCacheFor: ['cimode'],
+  },
+  keySeparator: false,
+  ignoreRoutes: ['/.next/', '/static/', '/public/', '/api/'],
 });
