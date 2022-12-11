@@ -9,7 +9,7 @@
     "export": "npm run build && next export"
   },
   "dependencies": {
-    "express": "^4.16.4",
+    "express": "^4.17.3",
     "i18next": "^14.0.1",
     "i18next-xhr-backend": "^3.2.2",
     "next": "^9.4.4",
